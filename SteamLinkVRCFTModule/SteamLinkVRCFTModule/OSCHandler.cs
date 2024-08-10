@@ -10,7 +10,6 @@ using VRCFaceTracking;
 using VRCFaceTracking.Core.OSC;
 using VRCFaceTracking.Core.Params.Expressions;
 using VRCFaceTracking.OSC;
-using System.Buffers.Binary;
 using System.Globalization;
 
 namespace SteamLinkVRCFTModule

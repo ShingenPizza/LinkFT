@@ -5,8 +5,6 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SteamLinkVRCFTModule", "SteamLinkVRCFTModule\SteamLinkVRCFTModule.csproj", "{1A0F7A33-BAE4-4517-BAC8-EA474F32F9D3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VRCFaceTracking.Core", "..\VRCFaceTracking\VRCFaceTracking.Core\VRCFaceTracking.Core.csproj", "{8BF5B315-BB25-469F-A4D1-0900CE8A236C}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,14 +21,6 @@ Global
 		{1A0F7A33-BAE4-4517-BAC8-EA474F32F9D3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1A0F7A33-BAE4-4517-BAC8-EA474F32F9D3}.Release|x64.ActiveCfg = Release|Any CPU
 		{1A0F7A33-BAE4-4517-BAC8-EA474F32F9D3}.Release|x64.Build.0 = Release|Any CPU
-		{8BF5B315-BB25-469F-A4D1-0900CE8A236C}.Debug|Any CPU.ActiveCfg = Debug|x64
-		{8BF5B315-BB25-469F-A4D1-0900CE8A236C}.Debug|Any CPU.Build.0 = Debug|x64
-		{8BF5B315-BB25-469F-A4D1-0900CE8A236C}.Debug|x64.ActiveCfg = Debug|x64
-		{8BF5B315-BB25-469F-A4D1-0900CE8A236C}.Debug|x64.Build.0 = Debug|x64
-		{8BF5B315-BB25-469F-A4D1-0900CE8A236C}.Release|Any CPU.ActiveCfg = Release|x64
-		{8BF5B315-BB25-469F-A4D1-0900CE8A236C}.Release|Any CPU.Build.0 = Release|x64
-		{8BF5B315-BB25-469F-A4D1-0900CE8A236C}.Release|x64.ActiveCfg = Release|x64
-		{8BF5B315-BB25-469F-A4D1-0900CE8A236C}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,7 +8,6 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Microsoft.VisualBasic;
-using VRCFaceTracking.Core.OSC;
 
 namespace SteamLinkVRCFTModule
 {

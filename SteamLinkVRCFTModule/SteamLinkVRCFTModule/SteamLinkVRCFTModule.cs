@@ -11,6 +11,7 @@ namespace SteamLinkVRCFTModule
     {
         private OSCHandler OSCHandler;
         private const int DEFAULT_PORT = 9015;
+        const float PI = (float) Math.PI;
 
         public override (bool SupportsEye, bool SupportsExpression) Supported => (true, true);
 
@@ -26,20 +27,27 @@ namespace SteamLinkVRCFTModule
 
             return (true, true);
         }
+        
+        private static T Clamp<T>(T val, T min, T max) where T : IComparable<T>
+        {
+            if (val.CompareTo(min) < 0) return min;
+            if(val.CompareTo(max) > 0) return max;
+            return val;
+        }
 
         private static float CalculateEyeOpenness(float fEyeClosedWeight, float fEyeTightener)
         {
-            return 1.0f - Math.Clamp(fEyeClosedWeight + fEyeClosedWeight * fEyeTightener, 0.0f, 1.0f);
+            return 1.0f - Clamp(fEyeClosedWeight + fEyeClosedWeight * fEyeTightener, 0.0f, 1.0f);
         }
 
         private void UpdateEyeTracking()
         {
             {
-                float fAngleX = MathF.Atan2(OSCHandler.eyeTrackData[0], -OSCHandler.eyeTrackData[2]);
-                float fAngleY = MathF.Atan2(OSCHandler.eyeTrackData[1], -OSCHandler.eyeTrackData[2]);
+                float fAngleX = (float) Math.Atan2(OSCHandler.eyeTrackData[0], -OSCHandler.eyeTrackData[2]);
+                float fAngleY = (float) Math.Atan2(OSCHandler.eyeTrackData[1], -OSCHandler.eyeTrackData[2]);
 
-                float fNmAngleX = fAngleX / (MathF.PI / 2.0f) * 2.0f;
-                float fNmAngleY = fAngleY / (MathF.PI / 2.0f) * 2.0f;
+                float fNmAngleX = fAngleX / (PI / 2.0f) * 2.0f;
+                float fNmAngleY = fAngleY / (PI / 2.0f) * 2.0f;
 
                 if (float.IsNaN(fNmAngleX))
                 {
@@ -76,7 +84,8 @@ namespace SteamLinkVRCFTModule
         }
         private void UpdateFaceTracking()
         {
-            foreach (KeyValuePair<UnifiedExpressions, float> entry in OSCHandler.ueData)
+            // Avoid running into a dictionary error by cloning
+            foreach (KeyValuePair<UnifiedExpressions, float> entry in new Dictionary<UnifiedExpressions, float>(OSCHandler.ueData))
             {
                 UnifiedTracking.Data.Shapes[(int)entry.Key].Weight = entry.Value;
             }
