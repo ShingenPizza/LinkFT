@@ -1,3 +1,13 @@
+# Fork info
+
+This is a fork of [LinkFT](https://github.com/ykeara/LinkFT), created to:
+- start auto-updating the module, and stop auto-downgrading the module to the previous version after updating it manually
+- show the proper "last updated" date
+- stop crashing my VRCFT
+- possibly add some improvements
+- (and to just learn something new)
+
+
 # SteamLink Module for VRCFT
 
 The Implementation is **EXPERIMENTAL** and may change without notice causing app to fail.

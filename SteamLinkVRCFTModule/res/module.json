@@ -1,15 +1,15 @@
 {
-    "ModuleId": "2a8c8080-2a76-46af-bf76-1da7c0127ef8",
-    "LastUpdated": "2025-09-03T19:31:20.499054",
-    "Version": "1.0.8",
+    "ModuleId": "e41be508-ab4e-4e01-a6bc-ab8f1412efbb",
+    "LastUpdated": "",
+    "Version": "1.0.8-0",
     "Downloads": 0,
     "Ratings": 0,
     "Rating": 0,
-    "AuthorName": "Ykeara",
+    "AuthorName": "Shingen (originally Ykeara)",
     "ModuleName": "SteamLink VRCFT Module",
     "ModuleDescription": "VRCFT eye and face tracking module for steamlink on Meta Quest devices.",
     "UsageInstructions": "Run on VRCFT Launch (uninstall if you need another module)",
-    "DownloadUrl": "https://github.com/ykeara/LinkFT/releases/latest/download/LinkFTModule.zip",
-    "ModulePageUrl": "https://github.com/ykeara/LinkFT",
+    "DownloadUrl": "https://github.com/ShingenPizza/LinkFT/releases/latest/download/LinkFTModule.zip",
+    "ModulePageUrl": "https://github.com/ShingenPizza/LinkFT",
     "DllFileName": "SteamLinkVRCFTModule.dll"
 }
