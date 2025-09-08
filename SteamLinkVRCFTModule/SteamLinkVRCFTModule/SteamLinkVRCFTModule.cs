@@ -1,5 +1,6 @@
 ﻿
 using VRCFaceTracking;
+using VRCFaceTracking.Core.Library;
 using VRCFaceTracking.Core.Params.Expressions;
 using static VRCFaceTracking.Core.Params.Expressions.UnifiedExpressions;
 
@@ -69,8 +70,13 @@ namespace SteamLinkVRCFTModule
         public override void Update()
         {
             Thread.Sleep(10);
-            UpdateEyeTracking();
-            UpdateFaceTracking();
+
+            if (Status == ModuleState.Active)
+            {
+                if (ModuleInformation.UsingEye) { UpdateEyeTracking(); }
+
+                if (ModuleInformation.UsingExpression) { UpdateFaceTracking(); }
+            }
         }
 
         public override void Teardown()
