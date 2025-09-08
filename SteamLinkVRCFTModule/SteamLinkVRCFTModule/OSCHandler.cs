@@ -207,11 +207,10 @@ namespace SteamLinkVRCFTModule
                                 if (BitConverter.IsLittleEndian)
                                 {
                                     byte[] msgsize = new byte[4];
-                                    msgsize[0] = buffer[i];
-                                    msgsize[1] = buffer[i + 1];
-                                    msgsize[2] = buffer[i + 2];
-                                    msgsize[3] = buffer[i + 3];
-                                    Array.Reverse(msgsize);
+                                    msgsize[0] = buffer[i + 3];
+                                    msgsize[1] = buffer[i + 2];
+                                    msgsize[2] = buffer[i + 1];
+                                    msgsize[3] = buffer[i + 0];
                                     messageLength = BitConverter.ToInt32(msgsize, 0);
                                 }
                                 else
